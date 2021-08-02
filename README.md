@@ -16,3 +16,17 @@ To improve security and simplify, this module makes use of a limited-permission 
 This delegator has explicit permission to delegate areas of a domain.
 
 See [github.com/nullstone-modules/gcp-subdomain](github.com/nullstone-modules/gcp-subdomain) to see example usage.
+
+
+## Variables
+
+None (The nullstone block contains the domain name.)
+
+## Outputs
+
+- `name: string` - The name of the created domain
+- `fqdn: string` - The FQDN (fully-qualified domain name) for the created domain
+- `zone_id: string` - Google DNS Managed Zone ID
+- `nameservers: list(string)` - List of Nameservers for Google DNS Managed Zone
+- `delegator: object({ email: string, key_file: string })`
+  - Google Service Account with limited permission to alter records in this managed zone
