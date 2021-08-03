@@ -5,6 +5,6 @@ data "ns_domain" "this" {
 
 resource "google_dns_managed_zone" "this" {
   name     = data.ns_workspace.this.block_ref
-  dns_name = data.ns_domain.this.dns_name
-  labels   = data.ns_workspace.this.tags
+  dns_name = "${data.ns_domain.this.dns_name}."
+  labels   = { for k, v in data.ns_workspace.this.tags : lower(k) => lower(v) }
 }
