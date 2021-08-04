@@ -14,6 +14,16 @@ output "zone_id" {
 }
 
 output "nameservers" {
-  value       = google_dns_managed_zone.this.name_servers 
+  value       = google_dns_managed_zone.this.name_servers
   description = "list(string) ||| Delegate your managed_zone to these virtual name servers"
+}
+
+output "delegator" {
+  value = {
+    service_account_email = google_service_account.delegator.email
+    key_file              = google_service_account_key.delegator.private_key
+  }
+  description = "object({ service_account_email: string, key_file: string }) ||| "
+
+  sensitive = true
 }
