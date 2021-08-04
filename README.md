@@ -30,3 +30,4 @@ None (The nullstone block contains the domain name.)
 - `nameservers: list(string)` - List of Nameservers for Google DNS Managed Zone
 - `delegator: object({ email: string, key_file: string })`
   - Google Service Account with limited permission to alter records in this managed zone
+- `dns_zone_name: string` - The name of the created DNS zone
