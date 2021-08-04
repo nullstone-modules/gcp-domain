@@ -27,3 +27,8 @@ output "delegator" {
 
   sensitive = true
 }
+
+output "dns_zone_name" {
+  value       = data.ns_workspace.this.block_ref
+  description = "string ||| The name of the created dns zone."
+}
