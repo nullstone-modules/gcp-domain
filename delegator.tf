@@ -8,7 +8,7 @@ resource "google_project_iam_custom_role" "dns-delegator" {
   role_id     = replace("dns_delegator_${local.resource_name}", "-", "_")
   title       = "DNS delegator ${local.resource_name}"
   description = "DNS delegator for ${local.resource_name}"
-  permissions = ["dns.changes.create", "dns.resourceRecordSets.update", "dns.resourceRecordSets.delete"]
+  permissions = ["dns.changes.create", "dns.resourceRecordSets.create", "dns.resourceRecordSets.update", "dns.resourceRecordSets.delete"]
 }
 
 resource "google_project_iam_member" "dns-delegator" {
