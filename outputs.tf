@@ -9,7 +9,7 @@ output "fqdn" {
 }
 
 output "zone_id" {
-  value       = data.ns_workspace.this.block_ref
+  value       = google_dns_managed_zone.this.name
   description = "string ||| Google DNS Managed Zone ID."
 }
 
