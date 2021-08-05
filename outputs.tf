@@ -9,8 +9,8 @@ output "fqdn" {
 }
 
 output "zone_id" {
-  value       = google_dns_managed_zone.this.id
-  description = "string ||| Zone id in format projects/{{project}}/managedZones/{{name}}"
+  value       = data.ns_workspace.this.block_ref
+  description = "string ||| Google DNS Managed Zone ID."
 }
 
 output "nameservers" {
@@ -26,9 +26,4 @@ output "delegator" {
   description = "object({ email: string, key_file: string }) ||| "
 
   sensitive = true
-}
-
-output "zone_name" {
-  value       = data.ns_workspace.this.block_ref
-  description = "string ||| The name of the created dns zone."
 }
