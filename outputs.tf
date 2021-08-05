@@ -9,8 +9,8 @@ output "fqdn" {
 }
 
 output "zone_id" {
-  value       = google_dns_managed_zone.this.id
-  description = "string ||| Zone id in format projects/{{project}}/managedZones/{{name}}"
+  value       = google_dns_managed_zone.this.name
+  description = "string ||| Google DNS Managed Zone ID."
 }
 
 output "nameservers" {
