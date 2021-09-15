@@ -14,7 +14,7 @@ output "zone_id" {
 }
 
 output "nameservers" {
-  value       = google_dns_managed_zone.this.name_servers
+  value       = [for ns in google_dns_managed_zone.this.name_servers : trimsuffix(ns, ".")]
   description = "list(string) ||| Delegate your managed_zone to these virtual name servers"
 }
 
