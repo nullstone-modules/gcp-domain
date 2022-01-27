@@ -12,8 +12,9 @@ resource "google_project_iam_custom_role" "dns-delegator" {
 }
 
 resource "google_project_iam_member" "dns-delegator" {
-  role   = google_project_iam_custom_role.dns-delegator.id
-  member = "serviceAccount:${google_service_account.delegator.email}"
+  role    = google_project_iam_custom_role.dns-delegator.id
+  member  = "serviceAccount:${google_service_account.delegator.email}"
+  project = data.google_project.this.project_id
 }
 
 resource "google_service_account_key" "delegator" {
