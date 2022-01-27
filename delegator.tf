@@ -16,7 +16,7 @@ resource "google_project_iam_custom_role" "dns-delegator" {
     "dns.resourceRecordSets.delete",
     "dns.resourceRecordSets.get",
     "dns.resourceRecordSets.list",
-    "dns.managedZoneOperations.get",
+    "dns.managedZones.get",
   ]
 }
 
