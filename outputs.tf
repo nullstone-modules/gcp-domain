@@ -20,9 +20,8 @@ output "nameservers" {
 
 output "delegator" {
   value = {
-    email      = google_service_account.delegator.email
-    key_file   = google_service_account_key.delegator.private_key
-    project_id = local.project_id
+    email    = google_service_account.delegator.email
+    key_file = google_service_account_key.delegator.private_key
   }
   description = "object({ email: string, key_file: string }) ||| "
 
