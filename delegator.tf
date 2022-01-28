@@ -13,11 +13,12 @@ resource "google_project_iam_custom_role" "dns-delegator" {
     "dns.changes.create",
     "dns.changes.get",
     "dns.resourceRecordSets.create",
-    "dns.resourceRecordSets.update",
     "dns.resourceRecordSets.delete",
     "dns.resourceRecordSets.get",
     "dns.resourceRecordSets.list",
+    "dns.resourceRecordSets.update",
     "dns.managedZones.get",
+    "dns.managedZones.list",
   ]
 }
 
