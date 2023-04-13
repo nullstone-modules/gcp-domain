@@ -1,0 +1,13 @@
+org_name: nullstone
+name: gcp-domain
+friendly_name: GCP Domain
+description: Creates a GCP-managed DNS zone to manage a root domain
+category: domain
+subcategory: ""
+provider_types:
+    - gcp
+platform: cloud-dns
+subplatform: ""
+type: ""
+appCategories: []
+is_public: true
