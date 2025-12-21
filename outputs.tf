@@ -20,8 +20,9 @@ output "nameservers" {
 
 output "delegator" {
   value = {
+    project_id  = local.project_id
     email       = google_service_account.delegator.email
     impersonate = true
   }
-  description = "object({ email: string, impersonate: bool }) ||| "
+  description = "object({ project_id: string,email: string, impersonate: bool }) ||| "
 }

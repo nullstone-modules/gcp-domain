@@ -1,3 +1,6 @@
+# 0.3.2 (Dec 20, 2025)
+* Added `project_id` to delegator output.
+
 # 0.3.1 (Dec 20, 2025)
 * Removed `sensitive` from delegator output since it no longer contains keyfile.
 
