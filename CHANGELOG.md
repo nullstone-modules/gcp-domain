@@ -1,3 +1,6 @@
+# 0.3.3 (Dec 20, 2025)
+* Added back `key_file` to delegator output until we can figure out impersonation.
+
 # 0.3.2 (Dec 20, 2025)
 * Added `project_id` to delegator output.
 

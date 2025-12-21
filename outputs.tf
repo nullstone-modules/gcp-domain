@@ -20,9 +20,13 @@ output "nameservers" {
 
 output "delegator" {
   value = {
-    project_id  = local.project_id
-    email       = google_service_account.delegator.email
+    project_id = local.project_id
+    email      = google_service_account.delegator.email
+    // TODO: Figure out how to remove use of keys
+    key_file    = google_service_account_key.delegator.private_key
     impersonate = true
   }
   description = "object({ project_id: string,email: string, impersonate: bool }) ||| "
+
+  sensitive = true
 }

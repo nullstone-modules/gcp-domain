@@ -28,6 +28,11 @@ resource "google_project_iam_member" "dns-delegator" {
   project = data.google_project.this.project_id
 }
 
+// TODO: Figure out how to remove use of keys
+resource "google_service_account_key" "delegator" {
+  service_account_id = google_service_account.delegator.name
+}
+
 // Allow Nullstone Agent to impersonate the pusher account
 resource "google_service_account_iam_binding" "delegator_nullstone_agent" {
   service_account_id = google_service_account.delegator.id
