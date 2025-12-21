@@ -1,3 +1,6 @@
+# 0.3.1 (Dec 20, 2025)
+* Removed `sensitive` from delegator output since it no longer contains keyfile.
+
 # 0.3.0 (Dec 20, 2025)
 * Use service account impersonation instead of service account keys for DNS delegator.
 * Migrated from `terraform` to `tofu`.

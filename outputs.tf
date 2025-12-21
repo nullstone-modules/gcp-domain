@@ -24,6 +24,4 @@ output "delegator" {
     impersonate = true
   }
   description = "object({ email: string, impersonate: bool }) ||| "
-
-  sensitive = true
 }
