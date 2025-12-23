@@ -1,3 +1,7 @@
+# 0.4.0 (Dec 23, 2025)
+* Allow a user to disable `key_file` and user impersonation instead.
+* Added the ability to specify which Nullstone Agents can delegate subdomains.
+
 # 0.3.3 (Dec 20, 2025)
 * Added back `key_file` to delegator output until we can figure out impersonation.
 
