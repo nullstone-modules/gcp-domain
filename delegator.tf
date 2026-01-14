@@ -6,6 +6,8 @@ locals {
 resource "google_service_account" "delegator" {
   account_id   = local.delegator_name
   display_name = "${local.resource_name} service account"
+
+  depends_on = [google_project_service.iam]
 }
 
 resource "google_project_iam_custom_role" "dns-delegator" {
@@ -24,6 +26,8 @@ resource "google_project_iam_custom_role" "dns-delegator" {
     "dns.managedZones.get",
     "dns.managedZones.list",
   ]
+
+  depends_on = [google_project_service.iam]
 }
 
 resource "google_project_iam_member" "dns-delegator" {

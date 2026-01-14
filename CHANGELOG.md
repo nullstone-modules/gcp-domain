@@ -1,3 +1,6 @@
+# 0.4.3 (Jan 14, 2026)
+* Ensured IAM service is enabled before creating service account.
+
 # 0.4.2 (Jan 14, 2026)
 * Enabled IAM service for the GCP project.
 
