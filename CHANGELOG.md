@@ -1,3 +1,6 @@
+# 0.4.2 (Jan 14, 2026)
+* Enabled IAM service for the GCP project.
+
 # 0.4.1 (Jan 14, 2026)
 * Shortened delegator service account name to max 30 characters.
 
