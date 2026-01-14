@@ -1,6 +1,10 @@
 # Service account to delegate permission for DNS zone via IAM
+locals {
+  delegator_name = "${substr(local.block_ref, 0, 30 - length("--12345"))}-${random_string.resource_suffix.result}"
+}
+
 resource "google_service_account" "delegator" {
-  account_id   = local.resource_name
+  account_id   = local.delegator_name
   display_name = "${local.resource_name} service account"
 }
 

@@ -1,3 +1,6 @@
+# 0.4.1 (Jan 14, 2026)
+* Shortened delegator service account name to max 30 characters.
+
 # 0.4.0 (Dec 23, 2025)
 * Allow a user to disable `key_file` and user impersonation instead.
 * Added the ability to specify which Nullstone Agents can delegate subdomains.
